@@ -1,0 +1,1 @@
+{"body": "H! How you doing?", "to": "alice@domain.com", "from": "bob@domain.com", "subject": "Hello", "attachment": [{ "body": "file content", "filename": "test.txt" }]}

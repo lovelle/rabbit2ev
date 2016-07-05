@@ -1,0 +1,11 @@
+argparse==1.2.1
+pika==0.9.14
+# Test for upgrade pika version
+# pika==0.10.0
+
+# Test stuff
+pytest==2.9.1
+pytest-cov==2.2.1
+coverage==4.1
+py==1.4.31
+flake8==2.5.4

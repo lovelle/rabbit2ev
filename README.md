@@ -39,7 +39,7 @@ $ cp conf/rabbit2ev.sample.ini conf/rabbit2ev.ini
 $ make test
 ```
 
-## Running the server
+## Running the default server
 
 You can either choose to run the server standalone
 or with a process manager like [supervisor](http://supervisord.org/)
@@ -52,16 +52,30 @@ $ editor conf/rabbit2ev.ini
 $ make run
 ```
 
+## Starting custom server plugin
+
+To start your own server with your custom plugin (event handler), just
+need import the lib, set the config and start it and thats' all ;).
+
+```python
+from rabbit2ev.rabbitmq import RabbitHandler
+
+mail = RabbitHandler()
+mail.config = 'conf/rabbit2mail.ini' # configure the plugin you need
+mail.start()
+```
+
 Since the idea is to have multiple server instances running with each
 configuration and with his own queue, if you want to have multiple
 server instances, supervisor process manager is the recommended way.
 
-## Plugins (mail)
+
+## 1. Plugins (mail)
 
 For now, the only one handler is [nullmailer](https://github.com/bruceg/nullmailer)
 client file generator.
 
-### Usage
+### 1.1 Mail plugin usage
 
 rabbit2ev will be listen in a queue in RabbitMq, so you can send an email,
 publishing a message into the proper queue.

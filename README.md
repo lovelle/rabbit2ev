@@ -1,22 +1,18 @@
 Rabbit2Ev
 =========
-Receive messages from RabbitMQ and bind them to custom plugin.
+Receive messages from RabbitMQ and bind them to an event handler.
 
 Rabbit2ev is a python daemon, listening for json formatted events to process them.
 e.g sending emails asynchronous.
 
-The main purpose of this daemon is to have one (or multiple) rabbit2ev instances
-listening for incoming events ready to be processed, using RabbitMQ 
-as a message interface for receiving the event binded to a custom plugin.
+The main purpose of this daemon is to have a simple and unified set of workers ready
+to process incoming events using RabbitMQ as a message interface for receiving
+the event binded to any plugin available.
 
-Nowadays, the only one plugin developed is for sending mails, but, another plugins with
-different protocols can be created.
+Nowadays, the only one plugin developed is for sending mails, but, others plugins with
+differents protocols could be implemented.
 
 `json` is the only allowed format for processing events.
-
-***************
-the goal of `rabbit2ev` is to provide an unified handlers for jobs that wants to be async processed
-***************
 
 ## Install
 

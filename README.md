@@ -1,6 +1,6 @@
 Rabbit2Ev
 =========
-Receive messages from RabbitMQ and bind them to an event handler.
+Receive messages from RabbitMQ and bind them to an event routing.
 
 Rabbit2ev is a python daemon, listening for json formatted events to process them.
 e.g sending emails asynchronous.

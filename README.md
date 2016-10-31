@@ -117,7 +117,3 @@ The currently allowed keys to compose emails are (mandatory in bold):
 ## Contributing
 
 Of course, please don't be shy.
-
-## Extra
-
-Please be gentle.
